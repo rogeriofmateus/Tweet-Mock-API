@@ -11,18 +11,6 @@ export async function createTableTweet() {
         )
     `);
 }
-
-//É COMUM HAVER CAMPO UPDATED_AT
-//criar tabela de tweet history para cada tweet e criar controller para criar url de att
-//criar url de atualização
-//estudar status code para cada tipo de request
-//estudar REST API
-//salvar versão da API atual e depois re-implementar seguindo REST
-//NEST é framework backend de js
-//nestjs.com
-//NEST usa typescript
-//estudar type ORM e oq é um ORM
-
 export async function insertTweet(message) {
     const db = await openDb();
     let statusCode;
@@ -66,19 +54,3 @@ export async function deleteTweet(id) {
     }
     return ([statusCode, alert]);
 }
-
-//separar persistência de dados da regra de negócios
-//estudar NEST e colocar este projeto nele
-//ver nomes melhores para variáveis alert (statusCode tá belezinha)
-
-//pesquisar camada de:  persistência de dados (acessar bd)
-//                      negócio (manipula comportamentos do sistema conforme necessidades do negócio)
-//                      apresentação
-//pesquisar dado e info
-//consistencia de dados
-//listar ultimos 20 tweets não deletados DONE
-
-//sql injection
-//validar se queries têm sql injection
-//Código está seguro de injections; queries não usam concatenação. Ao invés disso, substituem o caracter "?"
-//para formar o query.
